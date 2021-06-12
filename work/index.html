@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            overflow-x: hidden;
+        }
+        .asd{
+            width: 100%;
+            height: 50px;
+            background: black;
+            display: flex;
+            padding-left: 15px;
+            align-items: center;
+            justify-content: center;
+        }
+        li{
+            list-style: none;
+            line-height: 28px;
+        }
+         a{
+            color: white;
+            text-decoration: none;
+        }
+        .one{
+            align-self: center;
+            width: 250px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 17px;
+            padding-left: 20px;
+        }
+        .two{
+            align-self: center;
+            font-size: 12px;
+            width: 530px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .two1 {
+            padding-left: 0px;
+        }
+        a{
+            display: inline;
+        }
+        a:hover{
+            color: orange;
+        }
+        .cha{
+            height:21px;
+            width: 170px;
+            margin-left: 10px;
+            border-style: none;
+        }
+        .inputText{
+            background: url("./images/two.png") no-repeat;
+            border-radius:9px;
+            height:21px;
+            width: 170px;
+        }
+        .two li{
+            margin-left:-45px;
+        }
+        .lid{
+            padding-left: 30px;
+        }
+        .shape{
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: url("./images/first.jpg") no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top:190px;
+            right: 130px;
+            animation: rotate 20s linear infinite;
+        }
+        @keyframes rotate{
+  	    0%{
+  		    transform: rotate(0)
+  	        }
+  	    100%{
+  		    transform: rotate(360deg)
+  	        }
+        }
+        .player{
+            width: 300px;
+            height:100px ;
+            position: absolute;
+            top:380px;
+            right: 80px;
+        }
+        .play{
+            float: left;
+            width: 42px;
+            height: 42px;
+            background: url("./images/button.jpg") no-repeat;
+            background-position:-160px 0px;
+            display: inline;
+        }
+        .prograssBar{
+            float: left;
+            width: 200px;
+            height: 4px;
+            background:rgb(224, 224, 224);
+            display: inline;
+            position: relative;
+            top:20px;
+            left:10px
+        }
+        .playerRight{
+            position: relative;
+            left:220px;
+            top:-5px;
+            font-size: 15px;
+        }
+        #jingyin{
+            position: relative;
+            left:85px;
+            top:-33px;
+            width: 32px;
+            height: 25px;
+            background: url("./images/button.jpg") no-repeat;
+            background-position:-35px 0px;
+        }
+        .zan{
+            float: left;
+            width: 42px;
+            height: 42px;
+            background: url("./images/button.jpg") no-repeat;
+            background-position:-206px 0px;
+            display: inline;
+        }
+        #yellowbut{
+            width: 10px;
+            height: 10px;
+            background:url("./images/button.jpg") ;
+            background-position:-23px 0px;
+            display: inline-block;
+            position: relative;
+            top:-13px;
+        }
+        #prograssBar2{
+            width:0px;
+            height: 4px;
+            background:orange;
+        }
+        #down{
+            height: 45px;
+            width: 200px;
+            background: url("./images/button.jpg");
+            background-position:0 -130px ;
+            position: relative;
+            left: 70px;
+        }
+        #down a{
+            position: relative;
+            line-height: 45px;
+            left:60px;
+            color: black;
+            text-decoration: none;
+        }
+        .logo{
+            width: 18px;
+            height: 18px;
+            background: url("./images/button.jpg");
+            background-position: 0px 0px;
+            display: inline-block;
+            position: relative;
+            right:80px;
+            top:4px;
+        }
+        #comment{
+            width: 280px;
+            height: 75px;
+            position: absolute;
+            top: 520px;
+            right: 100px;
+        }
+        #portrait{
+            display: inline;
+            background: url("./images/head.png") no-repeat;
+            width: 70px;
+            height: 70px;
+            position: relative;
+            top:3px;
+            float: left;
+        }
+        #dialogue{
+            width: 60px;
+            height: 200px;
+            background: url("./images/button.jpg") no-repeat;
+            background-position: -452px 0px;
+            background-size: 500px 200px;
+            transform:rotate(90deg);
+            position: relative;
+            top:-65px;
+            left:145px;
+        }
+        #name1{
+            transform:rotate(270deg) scale(0.8);
+            font-size: 12px;
+            margin: 0px;
+            width: 100px;
+            position: relative;
+            bottom: -60px;
+            left: -40px;
+            color: rgb(197, 197, 197);
+            float: left;
+            
+        }
+        #name2{
+            transform:rotate(270deg);
+            font-size: 12px;
+            float: left;
+            position: relative;
+            bottom: -10px;
+            left: -15px;
+            width: 100px;
+        }
+        #dialogue a{
+            color: blueviolet;
+            display: inline-block;
+            transform:rotate(-90deg) ;
+            font-size: 12px;
+            position: relative;
+            top: -110px;
+            right: -13px;
+        }
+        .lyric{
+            width: 700px;
+            height: 500px;
+            position: absolute;
+            top:150px;
+            left:100px
+        }
+        .shou p{
+            margin-left: 10px;
+        }
+        .shou div{
+            background:url("./images/third.jpg");
+            margin-left: 10px;
+            height: 13px;
+            width: 15px;
+        }
+        .xi{
+            margin:0 auto;
+            width: 60px;
+            font-size: 20px;
+        }
+        .lyric div:nth-child(2){
+            display: flex;
+            font-size: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        .shou :nth-child(2){
+            color: rgb(255, 181, 21);
+        }
+        .shou :nth-child(4){
+            color: rgb(255, 181, 21);
+        }
+        .shou :nth-child(7){
+            color: rgb(255, 181, 21);
+        }
+        .line{
+            width: 700px;
+        }
+        #line{
+            width: 700px;
+            position: absolute;
+            top:710px;
+            left: 100px;
+        }
+        .hao{
+            margin:0 auto;
+            width: 300px;
+            text-align: center;
+        }
+        #comment1{
+            position: absolute;
+            top:650px;
+            left: 100px;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        #comment1 p:nth-child(1){
+            margin: 9px;
+        }
+        #comment1 p:nth-child(2){
+            font-size: 9px;
+        }
+        #publish{
+            width: 700px;
+            height: 200px;
+            position: absolute;
+            top:720px;
+            left: 100px;
+           
+        }
+        #portrait1{
+            background: url("./images/head.png") no-repeat;
+            width: 70px;
+            height: 70px;
+            margin-right: 10px;
+            float: left;
+        }
+        #text{
+            width: 610px;
+            height: 100px;
+           margin-bottom: 10px;
+        }
+        #look{
+            background: url();
+        }
+        #number{
+            width: 100px;
+            height: 15px;
+            margin: 0px;
+            float: right;
+            font-size: 10px;
+            margin-top: 5px;
+        }
+        #submit{
+            width: 50px;
+            height: 30px;
+            background: rgb(255, 191, 96);
+            border: 0px;
+            color: white;
+            float: right;
+        }
+        #marve{
+            width: 65px;
+            height: 21px;
+            position: relative;
+            top:80px;
+        }
+        #line1{
+            width: 700px;
+            position: absolute;
+            top:220px;
+           
+        }
+        #finner{
+            width:700px;
+            position: absolute;
+            top:940px;
+            left: 100px;
+        }
+        .zbc{
+            display: inline-block;
+            background: url("./images/head.png") no-repeat;
+            width: 70px;
+            height: 70px;
+            margin-right: 10px;
+            position: relative;
+            top: 10px;
+        }
+        .name{
+            display: inline-block;
+            color: rgb(248, 180, 90);
+            position: relative;
+            top:-50px;
+            margin: 0px;
+            padding: 0px;
+            font-size: 10px;
+        }
+        #values{
+            margin: 0px;
+            padding: 0px;
+            height: 30px;
+            width:550px;
+            display: inline-block;
+            position: relative;
+            left: -60px;
+            top:-23px;
+            font-size: 10px;
+        }
+        .hxx{
+            color: darkgrey;
+            display: inline-block;
+            position: relative;
+            font-size: 10px;
+            left: 560px;
+            top:-80px;
+        }
+        .delete{
+            color: rgb(102, 163, 241);
+            font-size: 10px;
+            display: inline-block;
+            position: relative;
+            top: -35px;
+            left: 480px;
+        }
+        .reply{
+            color: darkgrey;
+            display: inline-block;
+            position: relative;
+            font-size: 10px;
+            left: 513px;
+            top:-35px;
+        }
+        .first1{
+            height: 75px;
+        }
+        .line2{
+            position: relative;
+            top:-40px;
+            border: 0.5px solid rgb(199, 196, 196);
+        }
+        #time2{
+            height: 15px;
+            width: 120px;
+            display: inline-block;
+            position: relative;
+            font-size: 2px;
+            left: 79px;
+            top:-35px;
+            padding: 0px;
+            margin: 0px;
+        }
+        .first2{
+            display: none;
+        }
+        .page{
+            width: 1500px;
+            height: 30px;
+            float: left;
+            position: relative;
+            bottom:-1100px;
+            left:35px
+        }
+        .page li{
+            float: left;
+            font-size: 13px;
+            margin-left: 20px;
+        }
+        .same{
+            text-align: center;
+            line-height: 20px;
+            width: 20px;
+            height: 20px;
+            border-radius:50%;
+            border:1px solid rgba(255, 255, 255, 0.377);
+            background: rgb(129, 129, 129);
+            
+        }
+        #finner li:nth-child(n+5){
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="asd">
+        <img src="./images/one.jpg">
+        <ul class="one">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">榜单</a></li>
+            <li><a href="#">歌手</a></li>
+            <li><a href="#">下载酷我客户端</a></li>
+        </ul>
+        <ul class="two">
+            <canvas id="canvas" height="25" width="25"></canvas>
+            <li class="two1"><a href="#">美女秀</a></li>
+            <canvas id="canvas1" height="25" width="25"></canvas>
+            <li class="two1"><a href="#">酷我耳机</a></li>
+            <canvas id="canvas2" height="25" width="25"></canvas>
+            <li class="two1"><a href="#">VIP会员</a></li>
+            <canvas id="canvas3" height="25" width="25"></canvas>
+            <li class="two1"><a href="#">听</a></li>
+            <li class="lid"><a href="#">更多服务</a></li>
+            <li class="lid"><a href="#">登录</a></li>
+            <li class="lid"><a href="#">^</a></li>
+        </ul>
+        <div class="cha">
+            <input type="text" class="inputText" placeholder="找到好音乐  ">  
+        </div>
+    </div>
+    <div class="words"></div>
+    <div class="shape">
+        <canvas id="round" height="50" width="50"></canvas>
+    </div>
+    <div class="lyric">
+        <p class="xi">喜羊羊</p>
+        <div class="shou"><p>专辑:</p><p>儿歌大全</p>
+            <p>歌手:</p>
+            <p>华语群星</p><p>分享</p> <div></div><p>评论</p> 
+        </div>
+        <div class="line" style="border: 0.5px solid #000"></div>
+        <p class="hao">在所有天气 拥有叫人 大笑的力量</p>
+        <p class="hao">虽然我只是一只羊</p>
+        <p class="hao">虽然我只是一只羊</p>
+        <p class="hao">喜羊羊 美羊羊 懒羊羊 沸羊羊</p>
+        <p class="hao">慢羊羊 软绵绵 红太狼 灰太狼</p>
+    </div>
+    <div id="comment1">
+        <p>评论</p>
+        <p>1703条评论</p>
+    </div>
+    <div id="line"  style="border: 0.5px solid rgb(199, 196, 196)"></div>
+    <div id="publish">
+        <div id="portrait1"> </div>
+        <textarea id="text" placeholder="分享你的音乐见解"></textarea> 
+        <div id="look"></div>
+        <input type="button" id="submit" value="评论"/>
+        <div id="number"></div>
+        <div id="marve">精彩评论</div>
+        <div id="line1"  style="border: 0.5px solid rgb(199, 196, 196)"></div>
+    </div>
+    <div id="finner">
+        <li class="first2">
+            <div class="zbc"></div>
+            <p class="name">神奇的海螺</p>
+            <p id="values"></p>
+            <p id="time2"></p>
+            <a class="hxx" href="#">分享</a>
+            <a class="delete" href="#">删除</a>
+            <a class="reply" href="#">回复</a>
+            <div class="line2"  ></div>
+        </li>
+    </div>
+    <ul class="page">
+        <li class="same" id="same">&lt</li>
+        <li class="same" id="same1">1</li>
+        <li class="same" id="same2">2</li>
+        <li class="same">3</li>
+        <li>...</li>
+        <li class="same">17</li>
+        <li class="same">></li>
+    </ul>
+    <div class="player">
+        <audio id="mymusic">
+            <source src="./1.mp3" type="audio/mp3">
+        </audio>
+        <div class="play" id="bofang" ></div>
+        <div class="prograssBar">
+            <div id="prograssBar2" ></div>
+            <a href="##" id="yellowbut"  style="left: 0;"></a>
+        </div>
+        <div class="playerRight">
+            <p id="opacity">00.00</p>
+            <div id="jingyin"></div>
+        </div>
+        <div id="down">
+            <a href="#" >免费下载这首歌</a>
+            <div class="logo"></div>
+        </div>
+    </div>
+    <div id="comment">
+        <div id="portrait"></div>
+        <div id="haozeb">
+        <div id="dialogue">
+           <p id="name1">王梦弟——H5班</p>
+           <p id="name2">喜羊羊与灰太狼</p>
+           <a href="#">去现场></a>
+        </div>
+        </div>
+    </div>
+    <script>
+        var b=0;
+        var a=0;
+        var time;
+        var len=0;
+        var canvas  = document.getElementById("canvas");
+        var canvas1 = document.getElementById("canvas1");
+        var canvas2 = document.getElementById("canvas2");
+        var canvas3 = document.getElementById("canvas3");
+        var round   = document.getElementById("round");
+        var bofang=document.getElementById("bofang");
+        var mymusic=document.getElementById("mymusic");
+        var prograssBar2 = document.getElementById("prograssBar2");
+        var yellowbut=document.getElementById("yellowbut");
+        var opacity=document.getElementById("opacity");
+        var jingyan=document.getElementById("jingyan");
+        var submit=document.getElementById("submit");
+        var text=document.getElementById("text");
+        var number=document.getElementById("number");
+        var finner=document.getElementById("finner");
+        var values=document.getElementById("values");
+        var time2=document.getElementById("time2");
+        var first1=document.getElementById("first1");
+        var same1=document.getElementById("same1");
+        var same2=document.getElementById("same2");
+        var context = canvas.getContext("2d");
+        var context1 = canvas1.getContext("2d");
+        var context2 = canvas2.getContext("2d");
+        var context3 = canvas3.getContext("2d");
+        var roundct = round.getContext("2d");
+        var img=new Image();
+        img.src="./images/second.png";
+        window.onload=function(){
+            context.drawImage(img,220,20,34,23,0,-3,25,25);
+            context1.drawImage(img,220,20,34,23,0,-3,25,25);
+            context2.drawImage(img,220,20,34,23,0,-3,25,25);
+            context3.drawImage(img,220,20,34,23,0,-3,25,25);
+        }
+        roundct.beginPath();
+        roundct.strokeStyle="rgba(0,0,0,0.7)";
+        roundct.fillStyle="rgba(255,255,255,0.7)";
+        roundct.arc(25,25,25,0,2*Math.PI);
+        roundct.stroke();
+        roundct.fill();
+        roundct.beginPath();
+        roundct.strokeStyle="rgba(0,0,0,0.7)";
+        roundct.fillStyle="rgba(255,255,255)";
+        roundct.arc(25,25,7,0,2*Math.PI);
+        roundct.stroke();
+        roundct.fill();
+        bofang.onclick=function(){
+            if(a==0){
+                mymusic.play();
+                bofang.className="zan";
+                a=1;
+            }
+            else{
+                mymusic.pause();
+                bofang.className="play";
+                a=0
+            }
+        }
+        time=setInterval(function(){
+            if(mymusic.currentTime<=mymusic.duration){
+            var minutes=parseInt(mymusic.currentTime/60);
+            var seconds=Math.round(mymusic.currentTime%60);
+            if(minutes<10&&seconds<10){
+                opacity.innerHTML="0"+minutes+":0"+seconds;
+            }
+            else if(minutes<10&&seconds>10){
+                opacity.innerHTML="0"+minutes+":"+seconds;
+            }
+            else if(minutes>10&&seconds<10){
+                opacity.innerHTML=minutes+":0"+seconds;
+            }
+            else{
+                opacity.innerHTML=minutes+":"+seconds;
+            }
+            prograssBar2.style.width=mymusic.currentTime/mymusic.duration*200+"px";
+            yellowbut.style.left=mymusic.currentTime/mymusic.duration*200+"px";
+            }
+        else{
+            clearInterval(time);
+            }
+        },100)
+        jingyin.onclick=function(){
+        if(mymusic.muted){
+            mymusic.muted=false;
+            }
+        else{
+            mymusic.muted=true;
+            }
+      
+        }
+        setInterval(function(){
+           len=text.value.length;
+           number.innerHTML="已输入"+len+"个字";
+        },100)
+        submit.onclick=function(){
+            var data=new Date();
+            var year=data.getFullYear();
+            var month=data.getMonth()+1;
+		    var days=data.getDate();
+		    var hour=data.getHours();
+		    var minute=data.getMinutes();
+            var seconds=data.getSeconds();
+            var obj={
+                timer:year+"-"+month+"-"+days+" "+hour+":"+minute+":"+seconds,
+                value1:text.value
+            }
+            var location=JSON.stringify(obj);
+            localStorage["location"]=location;
+            var listione=localStorage["location"];
+            listione=JSON.parse(listione);
+            var liNode=document.createElement("li");
+            var liNode1=document.createElement("div");
+            var liNode2=document.createElement("p");
+            var liNode3=document.createElement("p");
+            var liNode4=document.createElement("p");
+            var liNode5=document.createElement("a");
+            var liNode6=document.createElement("a");
+            var liNode7=document.createElement("a");
+            var liNode8=document.createElement("div");
+            finner.appendChild(liNode);
+            liNode.appendChild(liNode1);
+            liNode.appendChild(liNode2);
+            liNode.appendChild(liNode3);
+            liNode.appendChild(liNode4);
+            liNode.appendChild(liNode5);
+            liNode.appendChild(liNode6);
+            liNode.appendChild(liNode7);
+            liNode.appendChild(liNode8);
+            liNode.className="first1";
+            liNode1.className="zbc";
+            liNode2.className="name";
+            liNode3.id="values";
+            liNode4.id="time2";
+            liNode5.className="hxx";
+            liNode6.className="delete";
+            liNode7.className="reply";
+            liNode8.className="line2";
+            liNode2.innerHTML="神奇的海螺";
+            liNode5.innerHTML="分享";
+            liNode6.innerHTML="删除";
+            liNode7.innerHTML="回复";
+            liNode3.innerHTML=listione["value1"];
+            liNode4.innerHTML=listione["timer"];
+            text.value="";
+        }
+        same2.onclick=function(){
+            finner.children[1].style.display="none";
+            finner.children[2].style.display="none";
+            finner.children[3].style.display="none";
+            finner.children[4].style.display="block";
+            finner.children[5].style.display="block";
+            finner.children[6].style.display="block";
+        }
+        same1.onclick=function(){
+            finner.children[1].style.display="block";
+            finner.children[2].style.display="block";
+            finner.children[3].style.display="block";
+            finner.children[4].style.display="none";
+            finner.children[5].style.display="none";
+            finner.children[6].style.display="none";
+        }
+    </script>
+</body>
+</html>
